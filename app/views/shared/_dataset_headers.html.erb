@@ -1,0 +1,39 @@
+<tr>
+  <th><%= sortable "jobid", "Sample" %></th>
+  <th><%= sortable "person" %></th>
+  <th><%= sortable "conditions" %></th>
+  <% if @showAll == "yes" %> 
+    <th><%= sortable "replicate" %></th>
+          
+    <th><%= sortable "cellType", "Cell Type" %></th>
+    <th><%= sortable "factor" %></th>
+          
+    <th><%= sortable "numReads", "Total Reads (M)" %></th>
+    <th><%= sortable "mappedReads", "Mapped Reads (M)" %></th>
+    <th><%= sortable "unmappedReads", "Unmapped Reads (M)" %></th>
+    <th><%= sortable "averageCPL", "Avg CPL"%></th>
+    <th><%= sortable "medianCPL", "Med CPL"%></th>
+    <th><%= sortable "minCPL", "Min CPL"%></th>
+    <th><%= sortable "maxCPL", "Max CPL"%></th>
+          
+    <th><%= sortable "aligner"%></th>
+    <th><%= sortable "system"%></th>
+    <th><%= sortable "alignParams", "Params"%></th>
+    <th><%= sortable "refGenome", "Ref"%></th>
+    <th><%= sortable "files"%></th>
+    <th><%= sortable "Files URL", "filesURL"%></th>
+          
+    <th><%= sortable "sequencer"%></th>
+    <th><%= sortable "barcode"%></th>
+  <% end %>
+  
+  <th><%= sortable "dateDone", "Done"%></th>
+  <th><%= sortable "dateRec", "Received"%></th>
+  
+  <% if @showAll == "yes" %>
+    <th><%= sortable "Lanes"%></th>
+          
+    <th><%= sortable "Comments"%></th>
+    <th><%= sortable "otherInfo", "Other"%></th>
+  <% end %>
+</tr>

@@ -1,0 +1,29 @@
+<% if current_user.background == "orange" %> 
+  <style>
+    body {
+      background: #ffbf12;
+      background-image: url(/images/background-orange.png);
+      background-repeat: repeat-x;
+    }
+  </style>
+<% end %>
+
+<% if current_user.background == "green" %> 
+  <style>
+    body {
+      background: #dbd1d1;
+      background-image: url(/images/background-green.png);
+      background-repeat: repeat-x;
+    }
+  </style>
+<% end %>
+
+<% if current_user.background == "watermelon" %> 
+  <style>
+    body {
+      background: #93f85f;
+      background-image: url(/images/background-watermelon.png);
+      background-repeat: repeat-x;
+    }
+  </style>
+<% end %>

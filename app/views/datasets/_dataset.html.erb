@@ -1,0 +1,99 @@
+<tr>
+  <td class="dataset"
+    <span class="stuff" ><%= link_to dataset.jobid, {:controller => "datasets", :action => "show", :id => dataset.id, :sort => sort_column, :direction => sort_direction, :showAll => toggle_state} %> </span>
+  </td>
+  <td class="dataset"
+    <span class="stuff" ><%= dataset.person %> </span>
+  </td>
+  <td class="dataset"
+      <span class="stuff"><%= dataset.conditions %> </span>
+  </td>
+  
+  <% if @showAll == "yes"%>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.replicate %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.cellType %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.factor %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.numReads %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.mappedReads %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.unmappedReads %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.averageCPL %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.medianCPL %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.minCPL %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.maxCPL %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.aligner %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.system %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.alignParams %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.refGenome %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.files %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.filesURL %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.sequencer %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.barcode %> </span>
+    </td>
+  <% end %>
+  
+  <td class="dataset"
+     <span class="stuff"><%= dataset.dateDone %> </span>
+  </td>
+  <td class="dataset"
+    <span class="stuff"><%= dataset.dateRec %> </span>
+  </td>
+  
+  <% if @showAll == "yes" %>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.lanes %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.comments %> </span>
+    </td>
+    <td class="dataset"
+      <span class="stuff"><%= dataset.otherInfo %> </span>
+    </td>
+  <% end %>
+  
+  <td>
+    <%= link_to "edit", edit_dataset_path(dataset)%>
+  </td>
+  <td>
+    <%= link_to "duplicate", duplicate_dataset_path(dataset)%>
+  </td>
+  <td>
+    <%= link_to "delete", dataset, :method => :delete,
+                                     :confirm => "Are you sure?",
+                                     :title => dataset.jobid %>
+  </td>
+</tr>
